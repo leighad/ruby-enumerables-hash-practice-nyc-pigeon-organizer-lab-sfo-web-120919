@@ -3,11 +3,11 @@ def nyc_pigeon_organizer(data)
   pigeon_list = {}
   pigeon_names = []
   
-  data.each do | attribute, property |
+  data.each do |attribute, property|
     # iterate over data set which contains attributes with properties
-    property.each do | trait, array |
+    property.each do |trait, array|
       # iterate over property which contains trait and array
-      array.each do | name |
+      array.each do |name|
         # iterate over the array, taking each name and checking to see if already 
         # included in pigeon_names, if not then shovels into the pigeon_names array
         pigeon_names << name if !pigeon_names.include?(name)
@@ -19,13 +19,17 @@ def nyc_pigeon_organizer(data)
     pigeon_list[pigeon] = Hash.new {|k, v| k[v] = []}
     # creates new hash for each pigeon in pigeon_list
     # defines default value of each key as an array
-    
     data.each do |attribute, property|
-      
+     # iterate over data set which contains attributes with properties
       pigeon_list[pigeon][attribute]
+      # sets the attribute for each pigeon
       property.each do |trait, array|
+      # iterate over property which contains trait and array
         array.each do |name|
           pigeon_list[name][attribute] << trait.to_s if name == pigeon
+          # if the name being compared is the same as the pigeon name, 
+          # then shovel the trait as a string (previously a symbol) into
+          # the appropriate attribute key for that pigeon name 
         end
       end
     end
