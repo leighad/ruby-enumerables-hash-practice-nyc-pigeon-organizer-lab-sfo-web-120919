@@ -15,15 +15,7 @@ def nyc_pigeon_organizer(data)
     end
   end
   
-  # pigeon_names.each do | name |
-  #   # for each of the names in pigeon_names array, 
-  #   # sets pigeon_list hash key to name with value to zero
-  #   pigeon_list[name] = {:color => "", :gender => "", :lives => ""}
-  # end
-  # p pigeon_list
-  # {"Theo"=>{:color=>"", :gender=>"", :lives=>""},
-  
-  pigeon_list
+  # pigeon_list
   
   pigeon_names.each do |pigeon|
     pigeon_list[pigeon] = Hash.new {|k, v| k[v] = []}
