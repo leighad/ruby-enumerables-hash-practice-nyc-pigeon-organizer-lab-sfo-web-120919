@@ -26,7 +26,7 @@ def nyc_pigeon_organizer(data)
   
   pigeon_list
   
-    pigeon_names.each do |nombre|
+  pigeon_names.each do |nombre|
     pigeon_list[nombre] = Hash.new {|k, v| k[v] = []}
     data.each do |attribute, items|
       pigeon_list[nombre][attribute]
@@ -40,7 +40,6 @@ def nyc_pigeon_organizer(data)
   
   pigeon_list
 
-end
 end
 
   # data.each do | trait, property |
