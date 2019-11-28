@@ -18,7 +18,7 @@ def nyc_pigeon_organizer(data)
   pigeon_names.each do |pigeon|
     pigeon_list[pigeon] = Hash.new {|k, v| k[v] = []}
     # creates new hash for each pigeon in pigeon_list
-    # defines default value as an array
+    # defines default value of as an array
     data.each do |attribute, items|
       pigeon_list[pigeon][attribute]
       items.each do |feature, arr|
