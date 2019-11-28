@@ -20,11 +20,11 @@ def nyc_pigeon_organizer(data)
     # creates new hash for each pigeon in pigeon_list
     # defines default value of each key as an array
     
-    data.each do |attribute, items|
+    data.each do |attribute, property|
       
       pigeon_list[pigeon][attribute]
-      items.each do |feature, arr|
-        arr.each do |name|
+      property.each do |trait, array|
+        array.each do |name|
           pigeon_list[name][attribute] << feature.to_s if name == pigeon
         end
       end
