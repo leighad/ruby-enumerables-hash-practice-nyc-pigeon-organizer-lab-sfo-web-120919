@@ -25,7 +25,7 @@ def nyc_pigeon_organizer(data)
       pigeon_list[pigeon][attribute]
       property.each do |trait, array|
         array.each do |name|
-          pigeon_list[name][attribute] << feature.to_s if name == pigeon
+          pigeon_list[name][attribute] << trait.to_s if name == pigeon
         end
       end
     end
