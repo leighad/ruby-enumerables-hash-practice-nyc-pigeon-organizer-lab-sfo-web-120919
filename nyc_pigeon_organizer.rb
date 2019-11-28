@@ -26,19 +26,19 @@ def nyc_pigeon_organizer(data)
   
   pigeon_list
   
-    names.each do |nombre|
-    pigeon_hash[nombre] = Hash.new {|k, v| k[v] = []}
+    pigeon_names.each do |nombre|
+    pigeon_list[nombre] = Hash.new {|k, v| k[v] = []}
     data.each do |attribute, items|
-      pigeon_hash[nombre][attribute]
+      pigeon_list[nombre][attribute]
       items.each do |feature, arr|
         arr.each do |name|
-          pigeon_hash[name][attribute] << feature.to_s if name == nombre
+          pigeon_list[name][attribute] << feature.to_s if name == nombre
         end
       end
     end
   end
   
-  pigeon_hash
+  pigeon_list
 
 end
 end
