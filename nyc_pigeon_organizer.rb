@@ -22,6 +22,7 @@ def nyc_pigeon_organizer(data)
   end
     
   p pigeon_list
+  # {"Theo"=>{:color=>"", :gender=>"", :lives=>""},
   
   pigeon_list
 end
