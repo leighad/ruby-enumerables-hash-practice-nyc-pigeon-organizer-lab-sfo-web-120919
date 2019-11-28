@@ -18,7 +18,7 @@ def nyc_pigeon_organizer(data)
   pigeon_names.each do | name |
     # for each of the names in pigeon_names array, 
     # sets pigeon_list hash key to name with value to zero
-    pigeon_list[name] = 0
+    pigeon_list[name] = {}
   end
     
   p pigeon_list
