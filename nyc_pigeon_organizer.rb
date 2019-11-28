@@ -20,8 +20,7 @@ def nyc_pigeon_organizer(data)
   #   # sets pigeon_list hash key to name with value to zero
   #   pigeon_list[name] = {:color => "", :gender => "", :lives => ""}
   # end
-    
-  p pigeon_list
+  # p pigeon_list
   # {"Theo"=>{:color=>"", :gender=>"", :lives=>""},
   
   pigeon_list
