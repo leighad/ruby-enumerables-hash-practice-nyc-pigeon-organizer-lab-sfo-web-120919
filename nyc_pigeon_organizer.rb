@@ -15,18 +15,6 @@ def nyc_pigeon_organizer(data)
     end
   end
   
-  # data.each do | trait, property |
-  #   # iterate over data set which contains traits with properties
-  #   property.each do | attribute, array |
-  #     # iterate over property which contains attribute and array
-  #     array.each do | name |
-  #       # iterate over the array, taking each name and checking to see if already 
-  #       # included in pigeon_names, if not then shovels into the pigeon_names array
-  #       pigeon_names << name if !pigeon_names.include?(name)
-  #     end
-  #   end
-  # end
-  
   pigeon_names.each do |pigeon|
     pigeon_list[pigeon] = Hash.new {|k, v| k[v] = []}
     # creates new hash for each pigeon in pigeon_list
